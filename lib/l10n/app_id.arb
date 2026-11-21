@@ -1,0 +1,190 @@
+{
+  "@@locale": "id",
+  "appName": "Detik",
+  "tabAlarm": "Alarm",
+  "tabClock": "Jam",
+  "tabTimer": "Timer",
+  "tabStopwatch": "Stopwatch",
+  "settings": "Pengaturan",
+  "save": "Simpan",
+  "cancel": "Batal",
+  "delete": "Hapus",
+  "add": "Tambah",
+  "close": "Tutup",
+  "undo": "Urungkan",
+  "alarmEmptyTitle": "Belum ada alarm",
+  "alarmEmptyBody": "Buat alarm pertamamu dan biarkan planet menjagamu tetap tepat waktu.",
+  "alarmCreate": "Buat alarm",
+  "alarmNew": "Alarm baru",
+  "alarmEdit": "Ubah alarm",
+  "alarmLabel": "Label",
+  "alarmRepeat": "Ulangi",
+  "alarmOnce": "Sekali",
+  "alarmEveryDay": "Setiap hari",
+  "alarmWeekdays": "Hari kerja",
+  "alarmTone": "Nada",
+  "alarmVibrate": "Getar",
+  "alarmSnooze": "Tunda",
+  "alarmSnoozeMinutes": "{n} menit",
+  "@alarmSnoozeMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmDeleted": "Alarm dihapus",
+  "alarmNextIn": "Alarm berikutnya dalam {t}",
+  "@alarmNextIn": {
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmNoneActive": "Tidak ada alarm aktif",
+  "alarmSetIn": "Alarm berbunyi dalam {t}",
+  "@alarmSetIn": {
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmRinging": "Alarm berbunyi",
+  "alarmSlideStop": "Geser untuk mematikan",
+  "alarmStop": "Matikan",
+  "alarmSnoozeFor": "Tunda {n} menit",
+  "@alarmSnoozeFor": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "timerRinging": "Timer selesai",
+  "durationDays": "{d} hari",
+  "@durationDays": {
+    "placeholders": {
+      "d": {
+        "type": "String"
+      }
+    }
+  },
+  "durationHours": "{h} jam",
+  "@durationHours": {
+    "placeholders": {
+      "h": {
+        "type": "String"
+      }
+    }
+  },
+  "durationMinutes": "{m} menit",
+  "@durationMinutes": {
+    "placeholders": {
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "dayMon": "Sen",
+  "dayTue": "Sel",
+  "dayWed": "Rab",
+  "dayThu": "Kam",
+  "dayFri": "Jum",
+  "daySat": "Sab",
+  "daySun": "Min",
+  "clockAddCity": "Tambah kota",
+  "clockSearchCity": "Cari kota",
+  "clockNoCities": "Tambahkan kota untuk melihat jam dunia",
+  "clockHoursAhead": "{h} jam lebih awal",
+  "@clockHoursAhead": {
+    "placeholders": {
+      "h": {
+        "type": "String"
+      }
+    }
+  },
+  "clockHoursBehind": "{h} jam lebih lambat",
+  "@clockHoursBehind": {
+    "placeholders": {
+      "h": {
+        "type": "String"
+      }
+    }
+  },
+  "clockSameTime": "Waktu sama",
+  "clockDay": "Siang",
+  "clockNight": "Malam",
+  "nightstand": "Mode nakas",
+  "nightstandExit": "Ketuk dua kali untuk keluar",
+  "timerNew": "Timer baru",
+  "timerStart": "Mulai",
+  "timerPause": "Jeda",
+  "timerResume": "Lanjut",
+  "timerReset": "Atur ulang",
+  "timerEmpty": "Belum ada timer",
+  "timerLabelHint": "Label (opsional)",
+  "timerHours": "Jam",
+  "timerMinutes": "Menit",
+  "timerSeconds": "Detik",
+  "timerRunningNotif": "Timer berjalan",
+  "timerDoneNotif": "Timer selesai",
+  "stopwatchLap": "Lap",
+  "stopwatchLapN": "Lap {n}",
+  "@stopwatchLapN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "stopwatchNoLaps": "Belum ada lap",
+  "settingsAppearance": "Tampilan",
+  "settingsTheme": "Tema",
+  "themeDark": "Gelap",
+  "themeLight": "Terang",
+  "themeSystem": "Ikuti sistem",
+  "settingsLanguage": "Bahasa",
+  "languageSystem": "Ikuti sistem",
+  "settingsTimeFormat": "Format 24 jam",
+  "settingsReduceMotion": "Kurangi animasi",
+  "settingsNight": "Mode malam",
+  "nightAuto": "Otomatis (jadwal)",
+  "nightOn": "Selalu malam",
+  "nightOff": "Mati",
+  "nightSystem": "Ikuti mode gelap sistem",
+  "nightStart": "Mulai malam",
+  "nightEnd": "Selesai malam",
+  "settingsAlarmDefaults": "Bawaan alarm",
+  "settingsDefaultSnooze": "Tunda bawaan",
+  "settingsDefaultTone": "Nada bawaan",
+  "settingsDefaultVibrate": "Getar bawaan",
+  "settingsPermissions": "Izin dan keandalan",
+  "tonePagi": "Pagi",
+  "toneBintang": "Bintang",
+  "toneKomet": "Komet",
+  "toneCustom": "Dari perangkat",
+  "tonePick": "Pilih dari perangkat",
+  "tonePreview": "Pratinjau",
+  "permTitle": "Agar alarm selalu berbunyi",
+  "permIntro": "Android bisa menghentikan alarm bila izin berikut belum diberikan.",
+  "permNotification": "Notifikasi",
+  "permNotificationBody": "Menampilkan alarm dan tombol matikan.",
+  "permExact": "Alarm tepat waktu",
+  "permExactBody": "Supaya alarm berbunyi tepat pada menitnya.",
+  "permFullScreen": "Layar penuh di atas kunci layar",
+  "permFullScreenBody": "Menampilkan layar alarm saat ponsel terkunci.",
+  "permBattery": "Abaikan optimasi baterai",
+  "permBatteryBody": "Mencegah sistem menunda alarm. Penting di Xiaomi, Oppo, Samsung.",
+  "permGranted": "Aktif",
+  "permGrant": "Izinkan",
+  "permOpenSettings": "Buka pengaturan",
+  "permBanner": "Beberapa izin alarm belum aktif",
+  "permFix": "Perbaiki",
+  "permVendorXiaomi": "Xiaomi/Redmi/POCO: Pengaturan > Aplikasi > Detik > Hemat baterai > Tanpa batasan, lalu aktifkan Mulai otomatis.",
+  "permVendorSamsung": "Samsung: Pengaturan > Baterai > Batas penggunaan di latar > hapus Detik dari aplikasi tidur.",
+  "permVendorOppo": "Oppo/Realme/OnePlus: Pengaturan > Baterai > Detik > Izinkan aktivitas latar dan Mulai otomatis.",
+  "permVendorOther": "Pastikan Detik tidak dibatasi baterai di pengaturan aplikasi.",
+  "permVendorTitle": "Panduan perangkat Anda"
+}

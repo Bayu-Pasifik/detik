@@ -1,0 +1,190 @@
+{
+  "@@locale": "en",
+  "appName": "Detik",
+  "tabAlarm": "Alarm",
+  "tabClock": "Clock",
+  "tabTimer": "Timer",
+  "tabStopwatch": "Stopwatch",
+  "settings": "Settings",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "add": "Add",
+  "close": "Close",
+  "undo": "Undo",
+  "alarmEmptyTitle": "No alarms yet",
+  "alarmEmptyBody": "Create your first alarm and let the planets keep you on time.",
+  "alarmCreate": "Create alarm",
+  "alarmNew": "New alarm",
+  "alarmEdit": "Edit alarm",
+  "alarmLabel": "Label",
+  "alarmRepeat": "Repeat",
+  "alarmOnce": "Once",
+  "alarmEveryDay": "Every day",
+  "alarmWeekdays": "Weekdays",
+  "alarmTone": "Tone",
+  "alarmVibrate": "Vibrate",
+  "alarmSnooze": "Snooze",
+  "alarmSnoozeMinutes": "{n} min",
+  "@alarmSnoozeMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmDeleted": "Alarm deleted",
+  "alarmNextIn": "Next alarm in {t}",
+  "@alarmNextIn": {
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmNoneActive": "No active alarms",
+  "alarmSetIn": "Alarm rings in {t}",
+  "@alarmSetIn": {
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmRinging": "Alarm ringing",
+  "alarmSlideStop": "Slide to stop",
+  "alarmStop": "Stop",
+  "alarmSnoozeFor": "Snooze {n} min",
+  "@alarmSnoozeFor": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "timerRinging": "Timer finished",
+  "durationDays": "{d} d",
+  "@durationDays": {
+    "placeholders": {
+      "d": {
+        "type": "String"
+      }
+    }
+  },
+  "durationHours": "{h} h",
+  "@durationHours": {
+    "placeholders": {
+      "h": {
+        "type": "String"
+      }
+    }
+  },
+  "durationMinutes": "{m} min",
+  "@durationMinutes": {
+    "placeholders": {
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "dayMon": "Mon",
+  "dayTue": "Tue",
+  "dayWed": "Wed",
+  "dayThu": "Thu",
+  "dayFri": "Fri",
+  "daySat": "Sat",
+  "daySun": "Sun",
+  "clockAddCity": "Add city",
+  "clockSearchCity": "Search city",
+  "clockNoCities": "Add a city to see world clocks",
+  "clockHoursAhead": "{h} h ahead",
+  "@clockHoursAhead": {
+    "placeholders": {
+      "h": {
+        "type": "String"
+      }
+    }
+  },
+  "clockHoursBehind": "{h} h behind",
+  "@clockHoursBehind": {
+    "placeholders": {
+      "h": {
+        "type": "String"
+      }
+    }
+  },
+  "clockSameTime": "Same time",
+  "clockDay": "Day",
+  "clockNight": "Night",
+  "nightstand": "Nightstand mode",
+  "nightstandExit": "Double tap to exit",
+  "timerNew": "New timer",
+  "timerStart": "Start",
+  "timerPause": "Pause",
+  "timerResume": "Resume",
+  "timerReset": "Reset",
+  "timerEmpty": "No timers yet",
+  "timerLabelHint": "Label (optional)",
+  "timerHours": "Hours",
+  "timerMinutes": "Minutes",
+  "timerSeconds": "Seconds",
+  "timerRunningNotif": "Timer running",
+  "timerDoneNotif": "Timer finished",
+  "stopwatchLap": "Lap",
+  "stopwatchLapN": "Lap {n}",
+  "@stopwatchLapN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "stopwatchNoLaps": "No laps yet",
+  "settingsAppearance": "Appearance",
+  "settingsTheme": "Theme",
+  "themeDark": "Dark",
+  "themeLight": "Light",
+  "themeSystem": "Follow system",
+  "settingsLanguage": "Language",
+  "languageSystem": "Follow system",
+  "settingsTimeFormat": "24-hour format",
+  "settingsReduceMotion": "Reduce motion",
+  "settingsNight": "Night mode",
+  "nightAuto": "Automatic (schedule)",
+  "nightOn": "Always night",
+  "nightOff": "Off",
+  "nightSystem": "Follow system dark mode",
+  "nightStart": "Night starts",
+  "nightEnd": "Night ends",
+  "settingsAlarmDefaults": "Alarm defaults",
+  "settingsDefaultSnooze": "Default snooze",
+  "settingsDefaultTone": "Default tone",
+  "settingsDefaultVibrate": "Default vibrate",
+  "settingsPermissions": "Permissions and reliability",
+  "tonePagi": "Morning",
+  "toneBintang": "Star",
+  "toneKomet": "Comet",
+  "toneCustom": "From device",
+  "tonePick": "Pick from device",
+  "tonePreview": "Preview",
+  "permTitle": "So alarms always ring",
+  "permIntro": "Android may block alarms unless the following permissions are granted.",
+  "permNotification": "Notifications",
+  "permNotificationBody": "Shows the alarm and stop button.",
+  "permExact": "Exact alarms",
+  "permExactBody": "So alarms ring exactly on time.",
+  "permFullScreen": "Full screen over lock screen",
+  "permFullScreenBody": "Shows the alarm screen when the phone is locked.",
+  "permBattery": "Ignore battery optimization",
+  "permBatteryBody": "Stops the system delaying alarms. Important on Xiaomi, Oppo, Samsung.",
+  "permGranted": "On",
+  "permGrant": "Allow",
+  "permOpenSettings": "Open settings",
+  "permBanner": "Some alarm permissions are off",
+  "permFix": "Fix",
+  "permVendorXiaomi": "Xiaomi/Redmi/POCO: Settings > Apps > Detik > Battery saver > No restrictions, then enable Autostart.",
+  "permVendorSamsung": "Samsung: Settings > Battery > Background usage limits > remove Detik from sleeping apps.",
+  "permVendorOppo": "Oppo/Realme/OnePlus: Settings > Battery > Detik > Allow background activity and Autostart.",
+  "permVendorOther": "Make sure Detik is not battery-restricted in app settings.",
+  "permVendorTitle": "Guide for your device"
+}
