@@ -5,8 +5,8 @@ Centang `[x]` saat selesai. Urutan = urutan pengerjaan. Estimasi: S ≤ 0,5 hari
 ## Fase 0 — Persiapan
 - [x] T0.1 (S) Buat proyek Flutter `detik` (Android, `com.detik`). Sisa: ikon sementara dan min SDK 26 belum diatur.
 - [ ] T0.2 (S) Tambah dependensi. Sudah: `rive`, `flutter_riverpod`, `intl`. Sisa: `drift`/`isar`, `go_router`, paket alarm/notifikasi, `permission_handler`.
-- [ ] T0.3 (S) Susun struktur folder `lib/features/*` dan `lib/core/*` (folder sudah ada, masih kosong); atur lint dan `flutter analyze` bersih (masih 1 info: `material.dart` deprecated di Flutter 3.50).
-- [ ] T0.4 (S) Siapkan tema dari STYLE.md (token warna, tipografi, terang/gelap) di `lib/core/theme`.
+- [x] T0.3 (S) Susun struktur folder `lib/features/*` dan `lib/core/*` (folder sudah ada, masih kosong); atur lint dan `flutter analyze` bersih (bersih: impor diganti ke `material_ui`).
+- [x] T0.4 (S) Siapkan tema dari STYLE.md (token warna, tipografi, terang/gelap) di `lib/core/theme`. Selesai: `DetikColors` (ThemeExtension + lerp siang/malam), `DetikTheme`, test lerp.
 - [ ] T0.5 (M) Aset Rive v0.1. Sudah: `orbit_system.riv` (abigailpaulette, CC BY) diunduh, dicatat di `CREDITS.md`, dan terbukti berjalan di emulator. Temuan: file hanya punya animasi linear "Animation 1" (tanpa State Machine/input), diputar lewat `RivePainter.animation` + `RiveArtboardWidget`; planet bukan planet asli; matahari di tengah perlu dijauhkan dari flip clock. Sisa: pilih `alarm_toggle` dan `empty_state`; putuskan orbit pakai file ini (redup dari Flutter) atau `CustomPainter` untuk planet asli.
 - [ ] T0.6 (S) Spike teknis: jadwalkan satu alarm 1 menit ke depan, bunyi saat app dimatikan, di emulator dan 1 perangkat nyata.
 
