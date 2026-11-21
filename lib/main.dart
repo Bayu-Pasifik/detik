@@ -1,120 +1,51 @@
+import 'package:alarm/alarm.dart';
 import 'package:material_ui/material_ui.dart';
-import 'package:rive/rive.dart';
+import 'package:permission_handler/permission_handler.dart';
 
-// Aplikasi uji sementara: memutar assets/rive/orbit_system.riv di belakang jam.
+// Spike T0.6: jadwalkan alarm 1 menit ke depan.
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await RiveNative.init();
-  runApp(const OrbitTestApp());
+  await Alarm.init();
+  runApp(const MaterialApp(home: Spike()));
 }
 
-class OrbitTestApp extends StatelessWidget {
-  const OrbitTestApp({super.key});
-
+class Spike extends StatefulWidget {
+  const Spike({super.key});
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const OrbitTestPage(),
-    );
-  }
+  State<Spike> createState() => _SpikeState();
 }
 
-class OrbitTestPage extends StatefulWidget {
-  const OrbitTestPage({super.key});
-
-  @override
-  State<OrbitTestPage> createState() => _OrbitTestPageState();
-}
-
-class _OrbitTestPageState extends State<OrbitTestPage> {
-  File? _file;
-  Artboard? _artboard;
-  final _painter = RivePainter.animation('Animation 1', fit: Fit.cover);
-  String _info = 'memuat...';
-  double _night = 0;
-
+class _SpikeState extends State<Spike> {
+  String log = 'siap';
   @override
   void initState() {
     super.initState();
-    _load();
+    Alarm.ringStream.stream.listen((a) => setState(() => log = 'RING ${a.id}'));
   }
 
-  Future<void> _load() async {
-    try {
-      final file = await File.asset(
-        'assets/rive/orbit_system.riv',
-        riveFactory: Factory.rive,
-      );
-      if (file == null) {
-        setState(() => _info = 'file null');
-        return;
-      }
-      // File tidak punya State Machine, jadi putar animasi linear langsung.
-      final artboard = file.defaultArtboard();
-      if (artboard == null) {
-        setState(() => _info = 'artboard null');
-        return;
-      }
-      setState(() {
-        _file = file;
-        _artboard = artboard;
-        _info = 'artboard=${artboard.name} (animasi linear "Animation 1")';
-      });
-    } catch (e) {
-      setState(() => _info = 'error: $e');
-    }
-  }
-
-  @override
-  void dispose() {
-    _painter.dispose();
-    _artboard?.dispose();
-    _file?.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final artboard = _artboard;
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          if (artboard != null)
-            RiveArtboardWidget(artboard: artboard, painter: _painter),
-          // Peredup malam uji dari Flutter.
-          IgnorePointer(
-            child: ColoredBox(
-              color: Colors.black.withValues(alpha: 0.6 * _night),
-            ),
-          ),
-          SafeArea(
-            child: Column(
-              children: [
-                // Jam di sepertiga atas supaya matahari (pusat orbit) tidak
-                // menimpa digit.
-                const Spacer(flex: 1),
-                const Text(
-                  '07:30',
-                  style: TextStyle(fontSize: 96, fontWeight: FontWeight.w700),
-                ),
-                const Spacer(flex: 3),
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Text(_info, textAlign: TextAlign.center),
-                ),
-                Slider(
-                  value: _night,
-                  onChanged: (v) => setState(() => _night = v),
-                ),
-              ],
-            ),
-          ),
-        ],
+  Future<void> _go() async {
+    await Permission.notification.request();
+    await Permission.scheduleExactAlarm.request();
+    final t = DateTime.now().add(const Duration(minutes: 1));
+    final ok = await Alarm.set(
+      alarmSettings: AlarmSettings(
+        id: 42,
+        dateTime: t,
+        assetAudioPath: 'assets/audio/pagi.wav',
+        notificationSettings: const NotificationSettings(
+            title: 'Detik', body: 'Alarm uji', stopButton: 'Matikan'),
       ),
     );
+    setState(() => log = 'set=$ok pada $t');
   }
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        body: Center(
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Text(log),
+            FilledButton(onPressed: _go, child: const Text('Alarm 1 menit')),
+          ]),
+        ),
+      );
 }

@@ -7,3 +7,5 @@
 Catatan teknis `orbit_system.riv`: 1 artboard ("New Artboard"), 1 animasi linear ("Animation 1"), tanpa State Machine dan tanpa input. Belum dimodifikasi.
 
 Lisensi CC BY mewajibkan pencantuman nama kreator; tampilkan di layar "Tentang".
+
+Nada alarm di `assets/audio/` dibuat sendiri lewat `tool/gen_tones.dart` (tanpa lisensi pihak ketiga).

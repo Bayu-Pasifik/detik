@@ -4,11 +4,11 @@ Centang `[x]` saat selesai. Urutan = urutan pengerjaan. Estimasi: S ≤ 0,5 hari
 
 ## Fase 0 — Persiapan
 - [x] T0.1 (S) Buat proyek Flutter `detik` (Android, `com.detik`). Sisa: ikon sementara dan min SDK 26 belum diatur.
-- [ ] T0.2 (S) Tambah dependensi. Sudah: `rive`, `flutter_riverpod`, `intl`. Sisa: `drift`/`isar`, `go_router`, paket alarm/notifikasi, `permission_handler`.
+- [x] T0.2 (S) Dependensi: `drift`, `drift_flutter`, `go_router`, `alarm`, `flutter_local_notifications`, `permission_handler`, `timezone`, `flutter_timezone`, `shared_preferences`, `drift_dev`, `build_runner`. minSdk 26, compileSdk 37, desugaring aktif, izin alarm/notifikasi di manifest.
 - [x] T0.3 (S) Susun struktur folder `lib/features/*` dan `lib/core/*` (folder sudah ada, masih kosong); atur lint dan `flutter analyze` bersih (bersih: impor diganti ke `material_ui`).
 - [x] T0.4 (S) Siapkan tema dari STYLE.md (token warna, tipografi, terang/gelap) di `lib/core/theme`. Selesai: `DetikColors` (ThemeExtension + lerp siang/malam), `DetikTheme`, test lerp.
-- [ ] T0.5 (M) Aset Rive v0.1. Sudah: `orbit_system.riv` (abigailpaulette, CC BY) diunduh, dicatat di `CREDITS.md`, dan terbukti berjalan di emulator. Temuan: file hanya punya animasi linear "Animation 1" (tanpa State Machine/input), diputar lewat `RivePainter.animation` + `RiveArtboardWidget`; planet bukan planet asli; matahari di tengah perlu dijauhkan dari flip clock. Sisa: pilih `alarm_toggle` dan `empty_state`; putuskan orbit pakai file ini (redup dari Flutter) atau `CustomPainter` untuk planet asli.
-- [ ] T0.6 (S) Spike teknis: jadwalkan satu alarm 1 menit ke depan, bunyi saat app dimatikan, di emulator dan 1 perangkat nyata.
+- [ ] T0.5 (M) Aset Rive v0.1. Sudah: `orbit_system.riv` (abigailpaulette, CC BY) diunduh, dicatat di `CREDITS.md`, dan terbukti berjalan di emulator. Temuan: file hanya punya animasi linear "Animation 1" (tanpa State Machine/input), diputar lewat `RivePainter.animation` + `RiveArtboardWidget`; planet bukan planet asli; matahari di tengah perlu dijauhkan dari flip clock. Keputusan: orbit pakai `CustomPainter` (planet asli); `orbit_system.riv` tidak dipakai. Nada alarm: 3 nada sintetis buatan sendiri (`tool/gen_tones.dart`). Sisa: `alarm_toggle` dan `empty_state` Rive belum ada filenya (pakai widget Flutter sebagai pengganti sampai ada).
+- [x] T0.6 (S) Spike alarm 1 menit: di emulator (API 37) alarm bunyi dengan app di latar (foreground service + notifikasi). Perangkat nyata: belum diuji (butuh Anda). Force-stop membatalkan alarm (perilaku Android).
 
 ## Fase 1 — Fondasi
 - [ ] T1.1 (M) Wrapper Rive `core/rive`: widget yang memuat `.riv`, menyediakan akses input, dispose benar, dukung "kurangi animasi".
