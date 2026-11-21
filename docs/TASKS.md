@@ -48,16 +48,16 @@ Centang `[x]` saat selesai. Urutan = urutan pengerjaan. Estimasi: S ≤ 0,5 hari
 - [x] T5.1 (M) Layar pengaturan: tema, format jam, snooze default, nada default, getar default — Tema, bahasa, 24 jam, kurangi animasi, mode malam, bawaan alarm. Teruji, tersimpan setelah restart.
 - [ ] T5.2 (M) Pemilih nada: bawaan + dari perangkat, pratinjau, simpan URI **(sebagian)** — Pemilih nada: 3 bawaan + dari perangkat + pratinjau. Belum diuji di emulator.
 - [ ] T5.3 (M) Aksesibilitas: Semantics, TalkBack, skala font 130%, mode kurangi animasi, alternatif geser **(sebagian)** — Semantics pada flip clock/roda/geser matikan; ketuk sebagai alternatif geser. Belum diuji dengan TalkBack/skala font 130%.
-- [ ] T5.4 (M) Performa: profil animasi di perangkat menengah, jeda Rive saat latar belakang, cek ukuran aset.
+- [ ] T5.4 (M) Performa: profil animasi di perangkat menengah, jeda Rive saat latar belakang, cek ukuran aset. **(sebagian)** — Ticker Flutter berhenti otomatis saat app di latar; aset kecil (orbit .riv 1,2 KB, 3 nada WAV 380 KB); APK arm64 29,6 MB. Profil di perangkat menengah BELUM dilakukan.
 - [x] T5.5 (S) Haptik pada picker/toggle — Haptik pada roda, chip, toggle, navigasi.
 
 ## Fase 6 — Uji dan rilis
-- [ ] T6.1 (L) Uji matriks perangkat: Android 8, 10, 12, 13, 14, 15 termasuk Xiaomi/Samsung/Oppo; catat kegagalan alarm.
-- [ ] T6.2 (M) Uji 24 jam alarm berulang dan uji reboot/force-stop/mode hemat baterai.
-- [ ] T6.3 (S) Panduan whitelist baterai per pabrikan di dalam aplikasi.
-- [ ] T6.4 (S) Ikon adaptif, splash, nama aplikasi, deskripsi.
-- [ ] T6.5 (M) Konfigurasi rilis: keystore, ProGuard/R8, `flutter build apk --release`, verifikasi tanda tangan dan versi.
-- [ ] T6.6 (S) Catatan rilis (ID), tag git, rilis GitHub dengan APK terlampir.
+- [ ] T6.1 (L) Uji matriks perangkat: Android 8, 10, 12, 13, 14, 15 termasuk Xiaomi/Samsung/Oppo; catat kegagalan alarm. **(sebagian)** — BELUM bisa: hanya ada emulator Android 17 (API 37). Matriks Android 8-15 dan Xiaomi/Samsung/Oppo butuh perangkat nyata (tugas pemilik).
+- [ ] T6.2 (M) Uji 24 jam alarm berulang dan uji reboot/force-stop/mode hemat baterai. **(sebagian)** — BELUM: uji 24 jam, reboot, force-stop, dan mode hemat baterai butuh perangkat nyata. Diketahui: force-stop Android membatalkan alarm.
+- [x] T6.3 (S) Panduan whitelist baterai per pabrikan di dalam aplikasi. — Panduan baterai per pabrikan (Xiaomi, Samsung, Oppo/Realme/OnePlus, lainnya) di layar Izin; teruji di emulator.
+- [x] T6.4 (S) Ikon adaptif, splash, nama aplikasi, deskripsi. — Ikon adaptif tata surya (`tool/gen_icon.dart`), splash warna `#0F1115`, nama "Detik", deskripsi di pubspec. Teruji di emulator.
+- [x] T6.5 (M) Konfigurasi rilis: keystore, ProGuard/R8, `flutter build apk --release`, verifikasi tanda tangan dan versi. — Keystore lokal (`android/detik-release.jks`, TIDAK di-commit), R8 + shrink resources, `flutter build apk --release --split-per-abi`; tanda tangan v2 terverifikasi (`apksigner verify`), versi 1.0.0+1. Build release diuji bunyi alarm di emulator.
+- [x] T6.6 (S) Catatan rilis (ID), tag git, rilis GitHub dengan APK terlampir. — Catatan rilis `docs/RELEASE_NOTES.md`; tag `v1.0.0-rc.1`; pra-rilis GitHub dengan APK terlampir (rc karena T6.1/T6.2 belum dijalankan).
 
 ## Backlog (pasca v1.0)
 - [ ] Widget layar utama, tantangan matikan alarm (hitung/QR), iOS, ekspor/impor alarm, tema tambahan.
